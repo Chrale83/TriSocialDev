@@ -1,19 +1,48 @@
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om oss</title>
     <link rel="stylesheet" href="about.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Om oss</h1>
-        <p>Här är en kort beskrivning om oss och vad vi gör.</p>
+        <p>Vi som driver TriSocial Dev är tre .NET studenter.</p>
     </div>
-    <div class="columns">
-        <div class="column"><img src="sofiaprofilepicture.png" alt="Profilbild av Sofia Nordström" width="100%" height="auto"></div>
-        <div class="column"><img src="idaprofilepictuer.jpg" alt="Profilbild av Ida Modigh" width="100%" height="auto"></div>
-        <div class="column"><img src="https://t3.ftcdn.net/jpg/07/22/79/00/360_F_722790006_pUlknQa5moxIu6NN7FET5dx5v0YDBMly.jpg" alt="Bild 3" width="100%" height="100%"></div>
+    <div class="column-component">
+        <div class="columns">
+            <div class="person" onclick="openCV('sofia')">
+                <img src="sofiaprofilepicture.png" alt="Profilbild av Sofia Nordström">
+                <div class="info">
+                    <h2>Sofia Nordström</h2>
+                    <p>Fullstack-utvecklare och grundare</p>
+                </div>
+            </div>
+            <div class="person" onclick="openCV('ida')">
+                <img src="idaprofilepictuer.jpg" alt="Profilbild av Ida Modigh">
+                <div class="info">
+                    <h2>Ida Modigh</h2>
+                    <p>Fullstack-utvecklare och grundare</p>
+                </div>
+            </div>
+            <div class="person" onclick="openCV('christian')">
+                <img src="christianprofilepicture.jpg" alt="Profilbild av Christian Alexandersson">
+                <div class="info">
+                    <h2>Christian Alexandersson</h2>
+                    <p>Fullstack-utvecklare och grundare</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function openCV(person) {
+            window.open(person + "-cv.pdf", "_blank");
+        }
+    </script>
 </body>
+
 </html>
