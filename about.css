@@ -11,16 +11,25 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 20px;
 }
 
 .container h1 {
+    font-size: 6rem;
+    margin-bottom: 0px;
+}
+
+.container h3 {
     font-size: 4rem;
+    margin-top: 0px;
     margin-bottom: 20;
 }
 .container p {
     font-size: 1.2rem;
+    text-align: left;
+    max-width: 1000px;
     border: 1px solid #013927;
     padding: 10px;
     display: inline-block;
