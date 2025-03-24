@@ -1,0 +1,94 @@
+body {
+    background: #cae6d5;
+}
+
+.hero {
+    background-image: url("./trisocialdev-hero.webp");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 50px); /* Justera höjden för att ge plats för marginalen */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 400;
+    color: #013927;
+    margin: 25px;
+}
+
+.hero-text-area {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    background-color: rgba(202, 230, 213, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 60vh;
+    width: 75%;
+    height: auto;
+    z-index: 1;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #013927;
+    padding: 10px;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    display: block;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;  /* Centrera SVG horisontellt */
+    align-items: center;      /* Centrera SVG vertikalt */
+    width: 100%;              /* Gör så att heading tar upp full bredd */
+    margin: 0;                /* Ta bort eventuella standardmarginaler */
+    color: #013927;
+}
+
+.heading svg text {
+    font-size: 2rem; /* Justera denna storlek för att göra texten större */
+    fill: #013927; /* Detta gör att texten får den gröna färgen */
+}
+
+@media (min-width: 768px) {
+    .subheading {
+        font-size: 2rem;
+    }
+}
+
+/* Media query för större skärmar */
+@media (min-width: 1200px) {
+    .heading {
+        width: 80%; /* Gör så att heading inte blir för bred på större skärmar */
+        margin: 0 auto;
+    }
+
+    .subheading {
+        font-size: 2rem;  /* Gör subheading större på skärmar större än 1200px */
+    }
+}
+
+/* Media query för extra stora skärmar */
+@media (min-width: 1600px) {
+    .heading {
+        width: 60%; /* Gör så att headingen blir ännu smalare på mycket stora skärmar */
+        margin: 0 auto;
+    }
+}
+
+path {
+  fill: transparent;
+}
