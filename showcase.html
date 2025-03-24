@@ -11,15 +11,18 @@
             box-sizing: border-box;
         }
         body {
+            background-color: #cae6d5;
+            color: #013927;
+        }
+        .christians-div {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             height: 100vh;
-            background-color: #cae6d5;
-            color: #013927;
             margin-top: 10px;
             text-align: center;
         }
+
         .container {
             display: flex;
             flex-direction: column; 
@@ -82,34 +85,37 @@
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Våra projekt</h1>
-        <p>Nedan finner du tre av våra senaste genomförda beställningsuppdrag. Vi har skapat tre e-handelssidor, en för paddeluthyrning i Tjuvkil,
-            en för en bokhandel i Bjurslätt och en för flygning med olika färdmedel.
-        </p>
+    <div id="navbar-container"></div>
+    <div id="christians-div">
         <div class="container">
-            <div class="block">
-                <a href="tjuvkilpaddlemodal.html"><img src="TjuvkilPaddle.png" alt="Tjuvkil Paddle"></a>
+            <h1>Våra projekt</h1>
+            <p>Nedan finner du tre av våra senaste genomförda beställningsuppdrag. Vi har skapat tre e-handelssidor, en för paddeluthyrning i Tjuvkil,
+                en för en bokhandel i Bjurslätt och en för flygning med olika färdmedel.
+            </p>
+            <div class="container">
+                <div class="block">
+                    <a href="tjuvkilpaddlemodal.html"><img src="TjuvkilPaddle.png" alt="Tjuvkil Paddle"></a>
+                </div>
+                <div class="block">
+                    <a href="bjurslattsbokbutikmodal.html"><img src="BjurslättsBokButik.png" alt="Bjurslätts Bok Butik"></a>
+                </div>
+                <div class="block">
+                    <a href="flyingseagullsmodal.html"><img src="FlyingSeagulls.png" alt="Flying Seagulls"></a>
+                </div>
             </div>
-            <div class="block">
-                <a href="bjurslattsbokbutikmodal.html"><img src="BjurslättsBokButik.png" alt="Bjurslätts Bok Butik"></a>
-            </div>
-            <div class="block">
-                <a href="flyingseagullsmodal.html"><img src="FlyingSeagulls.png" alt="Flying Seagulls"></a>
+            
+        </div>
+    
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-description"></p>
             </div>
         </div>
-        
     </div>
-
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <h2 id="modal-title"></h2>
-            <img id="modal-image" src="" alt="">
-            <p id="modal-description"></p>
-        </div>
-    </div>
+    
 
     <script>
         function openModal(imageSrc, title, description) {
@@ -123,5 +129,6 @@
             document.getElementById("myModal").style.display = "none";
         }
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>
