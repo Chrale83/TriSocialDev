@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrerade Block</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: #cae6d5;
+            color: #013927;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
+            align-items: center;
+        }
+        .container p {
+            max-width: 50%;
+        }
+        .block {
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+        }
 
+        .block img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #cae6d5;
+            color: #013927;
+            justify-content: center;
+            align-items: center;
+            border-color: #013927;
+        }
+        .modal-content {
+            background-color: #cae6d5;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+        }
+        .modal img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            color: #013927;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Våra projekt</h1>
+        <p>Nedan finner du tre av våra senaste genomförda beställningsuppdrag. Vi har skapat tre e-handelssidor, en för paddeluthyrning i Tjuvkil,
+            en för en bokhandel i Bjurslätt och en för flygning med olika färdmedel.
+        </p>
+        <div class="container">
+            <div class="block">
+                <a href="tjuvkilpaddlemodal.html"><img src="TjuvkilPaddle.png" alt="Tjuvkil Paddle"></a>
+            </div>
+            <div class="block">
+                <a href="bjurslattsbokbutikmodal.html"><img src="BjurslättsBokButik.png" alt="Bjurslätts Bok Butik"></a>
+            </div>
+            <div class="block">
+                <a href="flyingseagullsmodal.html"><img src="FlyingSeagulls.png" alt="Flying Seagulls"></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc, title, description) {
+            document.getElementById("modal-image").src = imageSrc;
+            document.getElementById("modal-title").innerText = title;
+            document.getElementById("modal-description").innerText = description;
+            document.getElementById("myModal").style.display = "flex";
+        }
+        
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
