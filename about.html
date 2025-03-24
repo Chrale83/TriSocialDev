@@ -1,1 +1,56 @@
+<html lang="sv">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Om TriSocial Dev</h1>
+        <h3>Webbyrån för framtidens e-handel</h3>
+        <p>Välkommen till <strong>TriSoial Dev</strong> – en webbyrå med fokus på E-Commerce och modern webbutveckling.
+        Vi är tre .NET studenter som har grundat företaget med en gemensam vision: att skapa skräddarsydda och 
+    skalbara lösningar för framtidens digitala handel. <br/><br/>Med bakgrund inom personalvetenskap, socialrätt och 
+gastronomi har vi en unik kombination av insikter om både människor, samhälle och kundupplevelser. Genom vår resa
+ från dessa branscher till mjukvaruutveckling tar vi med oss en bred förståelse för användarbeteenden och 
+affärsstrategier – något som gör oss särskilt skickliga på att bygga e-handelslösningar som är både tekniskt 
+robusta och kundvänliga. <br/><br/><strong>Låt oss tillsammans skapa framtidens e-handel!</strong>
+</p>
+    </div>
+    <div class="column-component">
+        <div class="columns">
+            <div class="person" onclick="openCV('sofia')">
+                <img src="sofiaprofilepicture.png" alt="Profilbild av Sofia Nordström">
+                <div class="info">
+                    <h2>Sofia Nordström</h2>
+                    <p>Fullstack-utvecklare och grundare</p>
+                </div>
+            </div>
+            <div class="person" onclick="openCV('ida')">
+                <img src="idaprofilepictuer.jpg" alt="Profilbild av Ida Modigh">
+                <div class="info">
+                    <h2>Ida Modigh</h2>
+                    <p>Fullstack-utvecklare och grundare</p>
+                </div>
+            </div>
+            <div class="person" onclick="openCV('christian')">
+                <img src="christianprofilepicture.jpg" alt="Profilbild av Christian Alexandersson">
+                <div class="info">
+                    <h2>Christian Alexandersson</h2>
+                    <p>Fullstack-utvecklare och grundare</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCV(person) {
+            window.open(person + "-cv.pdf", "_blank");
+        }
+    </script>
+</body>
+
+</html>
