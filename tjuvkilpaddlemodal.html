@@ -6,15 +6,17 @@
     <title>Tjuvkil Paddle</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            align-content: center;
             background-color: #cae6d5;
             color: #013927;
-            text-align: center;
             border: #013927;
+        }
+
+        #christians-div {
+            display: flex;
+            justify-content: center;
+            align-items: center !important;
+            flex-direction: column;
+            text-align: center !important;
             border-radius: 10%;
         }
 
@@ -49,15 +51,19 @@
     </style>
 </head>
 <body>
-    <h1>Tjuvkil Paddle</h1>
-    <img class="product-img" src="TjuvkilProduktPaket.png" alt="Tjuvkil Paddle produktpaket">
-    <p>Vi har byggt en hemsida för Tjuvkil Paddle i vilken kunden kan boka olika paket för att paddla. 
-        På hemsidan kan man se information om tider för soluppgång samt solnedgång men även vilket väder det beräknas vara 
-        den aktuella dagen. <br/> <br/>
-        Kunden kan välja antal kajaker att hyra samt lägga beställningen i varukorgen innan bokning genomförs. Respektive 
-        produktpaket kan även öppnas i modaler för att visa detaljerad information om respektive produktpaket. 
-    </p>
-    <img class="modal-img" src="TjuvkilModal.png" alt="Detailjerad produktbeskrivning">
-    <a href="showcase.html">Tillbaka</a>
+    <div id="navbar-container"></div>
+    <div id="christians-div">
+        <h1>Tjuvkil Paddle</h1>
+        <img class="product-img" src="TjuvkilProduktPaket.png" alt="Tjuvkil Paddle produktpaket">
+        <p>Vi har byggt en hemsida för Tjuvkil Paddle i vilken kunden kan boka olika paket för att paddla. 
+            På hemsidan kan man se information om tider för soluppgång samt solnedgång men även vilket väder det beräknas vara 
+            den aktuella dagen. <br/> <br/>
+            Kunden kan välja antal kajaker att hyra samt lägga beställningen i varukorgen innan bokning genomförs. Respektive 
+            produktpaket kan även öppnas i modaler för att visa detaljerad information om respektive produktpaket. 
+        </p>
+        <img class="modal-img" src="TjuvkilModal.png" alt="Detailjerad produktbeskrivning">
+        <a href="showcase.html">Tillbaka</a>
+    </div>    
+    <script src="navbar.js"></script>
 </body>
 </html>
